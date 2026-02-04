@@ -6,7 +6,7 @@ const Hero = () => {
   const [roleIndex, setRoleIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   
-  const roles = ["Student", "Builder", "Data Engineer", "Developer", "Dreamer"];
+  const roles = ["Student Leader", "Builder", "Data", "Developer", "Optimizer"];
   const typingSpeed = isDeleting ? 30 : 100;
   const pauseTime = 3000;
 

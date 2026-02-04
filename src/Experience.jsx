@@ -90,7 +90,7 @@ const Experience = () => {
 
         {/* TIMELINE GRID */}
         <div className="relative">
-          {/* THE VERTICAL LINE (This is the purple line you were missing) */}
+          {/* THE VERTICAL LINE */}
           <div className="absolute left-[7px] md:left-[31px] top-0 bottom-0 w-[2px] bg-gradient-to-b from-purple-500/50 via-zinc-800 to-transparent"></div>
 
           <div className="space-y-12">
