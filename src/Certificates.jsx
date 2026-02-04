@@ -55,7 +55,7 @@ const Certificates = () => {
       date: "2025",
       id_ref: "Data Science Track",
       type: "data",
-      
+    
     },
     {
       id: 7,
