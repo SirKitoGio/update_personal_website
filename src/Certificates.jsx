@@ -48,9 +48,17 @@ const Certificates = () => {
       type: "data",
       
     },
-
     {
       id: 6,
+      name: "AWS Concepts",
+      issuer: "DataCamp",
+      date: "2025",
+      id_ref: "Data Science Track",
+      type: "data",
+      
+    },
+    {
+      id: 7,
       name: "Python",
       issuer: "Codédex",
       date: "2025",
@@ -59,17 +67,8 @@ const Certificates = () => {
       
     },
     {
-      id: 7,
-      name: "Pandas",
-      issuer: "Codédex",
-      date: "2025",
-      id_ref: "Data Science Track",
-      type: "code",
-      
-    },
-    {
       id: 8,
-      name: "JavaScript",
+      name: "The Origins Trilogy",
       issuer: "Codédex",
       date: "2025",
       id_ref: "Frontend Track",

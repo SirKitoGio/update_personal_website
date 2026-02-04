@@ -5,9 +5,8 @@
 @layer base {
   body {
     @apply bg-zinc-950 text-zinc-300 font-mono antialiased;
-    /* This creates the "Tech Dot" pattern */
     background-image: radial-gradient(#27272a 1px, transparent 1px);
-    background-size: 24px 24px; /* The distance between dots */
+    background-size: 24px 24px; 
   }
   
   ::selection {
