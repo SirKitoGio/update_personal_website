@@ -6,7 +6,7 @@
   body {
     @apply bg-black text-zinc-300 font-mono antialiased;
     
-    background-image: radial-gradient(rgba(34, 197, 94, 0.1) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(58, 184, 104, 0.1) 1px, transparent 1px);
     background-size: 24px 24px; 
     background-attachment: fixed;
   }
