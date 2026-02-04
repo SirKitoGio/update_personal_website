@@ -1,35 +1,42 @@
 import React from 'react';
+import Navbar from './Navbar';
 import Hero from './Hero';
+import About from './About';
 import Experience from './Experience';
 import Projects from './Projects';
-import About from './About';
 import Certificates from './Certificates'; 
 
 function App() {
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="bg-zinc-950 min-h-screen text-zinc-300 selection:bg-green-500/30">
       
-      {/* BACKGROUND EFFECTS */}
-      <div className="fixed inset-0 pointer-events-none">
-        <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-green-500/20 rounded-full blur-[100px]" />
-        <div className="absolute top-[40%] right-[-10%] w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[100px]" />
-        <div className="absolute bottom-[10%] left-[-10%] w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[100px]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#09090b_100%)]" />
-      </div>
+      <Navbar />
 
-      {/* CONTENT LAYER */}
-      <div className="relative z-10">
-        <Hero />
-        <About />
-        <Experience /> 
-        <Projects />
-        <Certificates />
-        
-        <footer className="bg-transparent border-t border-zinc-900 text-zinc-500 py-8 text-center font-mono text-sm">
-          <p>&copy; 2026 Keith Alan Speirs. System.End_Process()</p>
-        </footer>
-      </div>
-      
+      <main>
+        <section id="home">
+          <Hero />
+        </section>
+
+        <section id="about">
+          <About />
+        </section>
+
+        <section id="experience">
+          <Experience />
+        </section>
+
+        <section id="projects">
+          <Projects />
+        </section>
+
+        <section id="certificates">
+          <Certificates />
+        </section>
+      </main>
+
+      <footer className="py-12 border-t border-zinc-900 text-center font-mono text-xs text-zinc-600">
+        <p>© 2026 KEITH ALAN SPEIRS // SYSTEM.SHUTDOWN()</p>
+      </footer>
     </div>
   );
 }

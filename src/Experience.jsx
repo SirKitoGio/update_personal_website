@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion'; 
 
 const Experience = () => {
   const [filter, setFilter] = useState('All');
@@ -37,7 +38,7 @@ const Experience = () => {
       company: "Rizal Technological University",
       duration: "Jul 2023 – Aug 2024",
       category: "Education",
-      description: "Surived Integral Calculus and Completed foundation year with a focus on engineering mathematics and AutoCAD before pivoting to software technology.",
+      description: "Survived Integral Calculus and Completed foundation year with a focus on engineering mathematics and AutoCAD before pivoting to software technology.",
       tags: ["AutoCAD", "Engineering Math"]
     },
     {
@@ -58,57 +59,58 @@ const Experience = () => {
     <section className="py-24 bg-transparent border-t border-zinc-800 text-zinc-300">
       <div className="max-w-5xl mx-auto px-6">
         
-  {/* HEADER & FILTERS */}
-<div className="mb-16">
-  {/* The Glowing Vertical Bar + Title Group */}
-  <div className="flex items-stretch gap-6 mb-8">
-    {/* This is the Green Bar from the image */}
-    <div className="w-1 bg-gradient-to-b from-green-400 to-green-900 shadow-[0_0_15px_rgba(74,222,128,0.5)]"></div>
-    
-    <div>
-      <span className="text-purple-500 font-mono text-sm uppercase tracking-widest">Timeline</span>
-      <h2 className="text-5xl font-black text-white mt-1 uppercase tracking-tighter">My_Journey</h2>
-    </div>
-  </div>
-  
-  <div className="flex flex-wrap gap-3">
-    {categories.map(cat => (
-      <button
-        key={cat}
-        onClick={() => setFilter(cat)}
-        className={`px-6 py-2 rounded-full font-mono text-xs uppercase transition-all duration-300 border ${
-          filter === cat 
-          ? 'bg-purple-600 border-purple-600 text-white shadow-[0_0_15px_rgba(168,85,247,0.4)]' 
-          : 'bg-zinc-900 border-zinc-800 text-zinc-500 hover:border-zinc-700'
-        }`}
-      >
-        {cat}
-      </button>
-    ))}
-  </div>
-</div>
+        {/* HEADER & FILTERS */}
+        <div className="mb-16">
+          <div className="flex items-stretch gap-6 mb-8">
+            <div className="w-1 bg-gradient-to-b from-green-400 to-green-900 shadow-[0_0_15px_rgba(74,222,128,0.5)]"></div>
+            <div>
+              <span className="text-purple-500 font-mono text-sm uppercase tracking-widest">Timeline</span>
+              <h2 className="text-5xl font-black text-white mt-1 uppercase tracking-tighter">My_Journey</h2>
+            </div>
+          </div>
+          
+          <div className="flex flex-wrap gap-3">
+            {categories.map(cat => (
+              <button
+                key={cat}
+                onClick={() => setFilter(cat)}
+                className={`px-6 py-2 rounded-full font-mono text-xs uppercase transition-all duration-300 border ${
+                  filter === cat 
+                  ? 'bg-purple-600 border-purple-600 text-white shadow-[0_0_15px_rgba(168,85,247,0.4)]' 
+                  : 'bg-zinc-900 border-zinc-800 text-zinc-500 hover:border-zinc-700'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        </div>
 
         {/* TIMELINE GRID */}
         <div className="relative">
-          {/* THE VERTICAL LINE */}
           <div className="absolute left-[7px] md:left-[31px] top-0 bottom-0 w-[2px] bg-gradient-to-b from-purple-500/50 via-zinc-800 to-transparent"></div>
 
           <div className="space-y-12">
+            {/* Using filteredExp and defining (exp, index) to fix the crash */}
             {filteredExp.map((exp, index) => (
-              <div key={index} className="relative pl-8 md:pl-24">
-                
+              <motion.div 
+                key={index} 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="relative pl-8 md:pl-24"
+              >
                 {/* Glowing Dot */}
                 <div className="absolute left-0 md:left-[24px] top-2 w-4 h-4 rounded-full bg-zinc-950 border-2 border-purple-500 z-10 shadow-[0_0_10px_rgba(168,85,247,0.8)]">
                    <div className="w-1.5 h-1.5 bg-purple-500 rounded-full m-auto mt-[1px]"></div>
                 </div>
 
                 <div className="grid md:grid-cols-[100px_1fr] gap-4 items-start">
-                  {/* Year Label */}
                   <span className="text-2xl font-black text-white opacity-40 font-mono mt-1">
                     {exp.year}
                   </span>
 
-                  {/* Experience Card */}
                   <div className="bg-zinc-900/40 backdrop-blur-sm border border-zinc-800 p-6 hover:border-purple-500/50 transition-all group">
                     <div className="flex justify-between items-start mb-4">
                       <div>
@@ -141,7 +143,7 @@ const Experience = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
