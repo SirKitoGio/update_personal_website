@@ -4,18 +4,16 @@
 
 @layer base {
   body {
-    @apply bg-zinc-950 text-zinc-300 font-mono antialiased;
-    background-image: radial-gradient(#27272a 1px, transparent 1px);
+    /* Pure black base */
+    @apply bg-black text-zinc-300 font-mono antialiased;
+    
+    /* Subtle dot grid for tech texture */
+    background-image: radial-gradient(rgba(34, 197, 94, 0.1) 1px, transparent 1px);
     background-size: 24px 24px; 
+    background-attachment: fixed;
   }
   
   ::selection {
     @apply bg-green-500 text-black;
-  }
-}
-
-@layer utilities {
-  .glitch-text {
-    text-shadow: 2px 2px 0px #ff00ff, -2px -2px 0px #00ff00;
   }
 }
