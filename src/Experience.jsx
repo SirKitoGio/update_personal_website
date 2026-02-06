@@ -49,6 +49,15 @@ const Experience = () => {
       category: "Leadership",
       description: "Led student initiatives and organized events to promote STEM education among high school students in Makati City.",
       tags: ["Leadership", "Event Planning", "Public Speaking"]
+    },
+    {
+      year: "2021",
+      title: "Senior High School - STEM Strand",
+      company: "University of Makati - Higher School ng UMak",
+      duration: "Jul 2021 – Jul 2023",
+      category: "Education",
+      description: "Graduate with High Honours within the top 75 Overall in a batch of 600+.",
+      tags: ["Mail Merge", "Research Projects"]
     }
   ];
 

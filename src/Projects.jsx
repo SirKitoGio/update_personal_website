@@ -8,14 +8,21 @@ const Projects = () => {
       title: "Kape4U",
       techStack: ["Flutter", "Dart", "Google Maps"],
       description: "Geolocation-based mobile app for finding coffee shops. Because caffeine is a requirement.",
-      link: "https://github.com/SirkitoGio"
+      link: "https://github.com/SirKitoGio/Kape4u---Kape-Lovers"
     },
     {
       id: 2,
-      title: "Analytics Pipeline",
-      techStack: ["Python", "AWS S3", "ETL"],
+      title: "Coffe Shop Analytics Pipeline",
+      techStack: ["Python(Pandas)", "AWS S3", "ETL", "Google API"],
       description: "Automated ETL pipeline extracting review data for 50+ shops. Turning unstructured ranting into structured data.",
-      link: "https://github.com/SirkitoGio"
+      link: "https://github.com/SirKitoGio/coffee-shop-analytics"
+    },
+    {
+      id: 3,
+      title: "IHM Website Prototype",
+      techStack: ["React", "Vite", "TailwindCSS"],
+      description: "A responsive website prototype for IHM Marine Services. Built with modern web technologies. When finished they will publish it on their domain.",
+      link: "https://ihmmarineservices.vercel.app"
     }
   ];
 
