@@ -20,8 +20,8 @@ const Experience = () => {
       company: "DataCamp",
       duration: "Nov 2025 – Present",
       category: "Education",
-      description: "Sponsored a free DataCamp subscription to upskill in data engineering. Currently focused on mastering SQL, Python, and Snowflake to build scalable data solutions.",
-      tags: ["SQL", "Python", "Snowflake", "AWS"]
+      description: "Sponsored by Data Engineering Pilinas for a free DataCamp subscription to upskill in data engineering. Currently focused on mastering SQL, Python, and Snowflake to build scalable data solutions.",
+      tags: ["SQL", "Python", "Snowflake", "AWS", "Data Engineering"]
     },
     {
       year: "2025",
